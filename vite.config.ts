@@ -1,18 +1,13 @@
 import { defineConfig } from 'vite'
-import path from 'path'
-import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/llvoiceandmusic/', // <- ESSENCIAL para GitHub Pages
-  plugins: [
-    react(),
-    tailwindcss(),
-  ],
+  base: '/llvoiceandmusic/', // importante para GitHub Pages
+  plugins: [react(), tailwindcss()],
   resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'), // <-- CORRETO
-    },
+    alias: [
+      { find: '@', replacement: '/src' } // Vite entende que é relativo ao root
+    ],
   },
-  assetsInclude: ['**/*.svg', '**/*.csv'],
 })

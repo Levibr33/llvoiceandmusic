@@ -2,11 +2,11 @@ import { Mic2, Sparkles } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { useState, useEffect } from "react";
 
-import img1 from "/assets/karaoke1.png";
-import img2 from "/assets/karaoke2.jpg";
-import img3 from "/assets/karaoke3.jpg";
-import img4 from "/assets/karaoke4.jpg";
-import img5 from "/assets/karaoke5.jpg";
+const img1 = "public/assets/karaoke1.png";
+const img2 = "public/assets/karaoke2.jpg";
+const img3 = "public/assets/karaoke3.jpg";
+const img4 = "public/assets/karaoke4.jpg";
+const img5 = "public/assets/karaoke5.jpg";
 
 const images = [img1, img2, img3, img4, img5];
 
